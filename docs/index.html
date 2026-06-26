@@ -5,18 +5,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bài tập HTML cơ bản</title>
     <style>
-        h1 {
-            color: red;
-            text-align: center;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        h2 {
-            color: lightblue;
-        }
+
         body {
-            background-color: grey;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            line-height: 1.6;
         }
-        .phongtrang {
+
+        header {
+            background: linear-gradient(135deg, #e94560, #c23152);
+            padding: 50px 20px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(233, 69, 96, 0.3);
+        }
+
+        h1 {
             color: white;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        h2 {
+            color: #e94560;
+            font-size: 1.5rem;
+            margin-bottom: 18px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(233, 69, 96, 0.3);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            padding: 10px 0;
+            padding-left: 28px;
+            position: relative;
+            font-size: 1.05rem;
+        }
+
+        ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4ecca3;
+            font-weight: bold;
+        }
+
+        .phongtrang {
+            color: #e0e0e0;
+        }
+
+        section img {
+            border-radius: 12px;
+            margin: 8px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        section img:hover {
+            transform: scale(1.08);
+        }
+
+        a {
+            color: #e94560;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #4ecca3;
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: rgba(0, 0, 0, 0.3);
+            color: #888;
+            font-size: 0.9rem;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            section {
+                padding: 20px;
+            }
+            section img {
+                width: 100%;
+                height: auto;
+                margin: 8px 0;
+            }
         }
     </style>
 </head>
@@ -52,7 +167,7 @@
         </section>
     </main>
 
-    <footer style="color: red;">
+    <footer>
         <p>&copy; 2026 - Bài tập HTML cơ bản</p>
     </footer>
 </body>
